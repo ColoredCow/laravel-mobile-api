@@ -1,7 +1,6 @@
 {
     "name": "pankaj-ag/larave-mobile-mobile-api",
     "description": "A Laravel package to setup Google OAuth and GSuite Admin SDK",
-    "keywords": ["coloredcow", "gsuite", "socialite", "laravel"],
     "homepage": "https://github.com/coloredcow/laravel-gsuite",
     "license": "MIT",
     "type": "project",
