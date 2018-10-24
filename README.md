@@ -1,4 +1,4 @@
-# Laravel mobile API
+# Laravel Mobile API
 
 # Prerequisite
 
