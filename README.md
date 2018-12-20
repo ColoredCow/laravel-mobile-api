@@ -46,3 +46,19 @@ For clear error responses you need to add the trait in the **App\Exceptions\Hand
     }
     
 ```
+
+
+## Auth Middleware
+
+If you wants to set the auth user for every authenticated route then add RestApiMiddleware in your project and apply in on routes. 
+
+```
+In kernel.php
+
+'restapi' => ColoredCow\LaravelMobileAPI\RestAPIMiddleware::class,
+
+In routes file 
+
+Route::group(['middleware' => ['auth:api', 'restapi:auth'] ], function () ...
+
+```
