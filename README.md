@@ -55,7 +55,7 @@ If you wants to set the auth user for every authenticated route then add RestApi
 ```
 In kernel.php
 
-'restapi' => \App\Http\Middleware\RestAPIMiddleware::class,
+'restapi' => ColoredCow\LaravelMobileAPI\RestAPIMiddleware::class,
 
 In routes file 
 
