@@ -5,10 +5,10 @@ namespace ColoredCow\LaravelMobileAPI\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
-class SetupMobileAPi extends Command
+class SetupMobileAPI extends Command
 {
-    protected $signature = 'mobileApi:setup';
-    protected $description = 'Setup mobileApi';
+    protected $signature = 'mobile-api:setup';
+    protected $description = 'Setup MobileAPI';
 
     public function handle()
     {

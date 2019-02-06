@@ -2,7 +2,7 @@
 
 namespace ColoredCow\LaravelMobileAPI;
 
-use ColoredCow\LaravelMobileAPI\Commands\SetupMobileAPi;
+use ColoredCow\LaravelMobileAPI\Commands\SetupMobileAPI;
 use Illuminate\Support\ServiceProvider;
 
 class MobileAPIServiceProvider extends ServiceProvider
@@ -22,32 +22,13 @@ class MobileAPIServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        //
-    }
-
-    public function registerRoutes()
-    {
-
-    }
-
-    public function registerPublishes()
-    {
-
-    }
 
     public function registerCommands()
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                SetupMobileAPi::class,
+                SetupMobileAPI::class,
             ]);
         }
-    }
-
-    public function registerProviders()
-    {
-
     }
 }
