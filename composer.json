@@ -12,6 +12,10 @@
             "homepage": "https://coloredcow.com"
         }
     ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/passport": "^7.1"
+    },
     "autoload": {
         "psr-4": {
             "ColoredCow\\LaravelMobileAPI\\": "src"
