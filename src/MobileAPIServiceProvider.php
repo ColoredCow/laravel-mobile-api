@@ -4,6 +4,7 @@ namespace ColoredCow\LaravelMobileAPI;
 
 use ColoredCow\LaravelMobileAPI\Commands\SetupMobileAPI;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Passport\Passport;
 
 class MobileAPIServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,7 @@ class MobileAPIServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Passport::routes();
         $this->registerCommands();
     }
 

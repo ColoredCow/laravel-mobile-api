@@ -29,8 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ColoredCow\\LaravelMobileAPI\\MobileAPIServiceProvider",
-                "ColoredCow\\LaravelMobileAPI\\MobileAuthAPIServiceProvider"
+                "ColoredCow\\LaravelMobileAPI\\MobileAPIServiceProvider"
             ],
             "dont-discover": [
             ]
