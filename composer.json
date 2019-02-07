@@ -25,15 +25,5 @@
         "psr-4": {
             "ColoredCow\\LaravelMobileAPI\\Test\\": "tests/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ColoredCow\\LaravelMobileAPI\\MobileAPIServiceProvider"
-            ],
-            "dont-discover": [
-            ]
-        }
     }
-
 }
