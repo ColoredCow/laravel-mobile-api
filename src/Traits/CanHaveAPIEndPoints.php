@@ -61,8 +61,10 @@ trait CanHaveAPIEndPoints
             throw $exception;
         }
 
-        if (method_exists($exception, 'getStatusCode') || method_exists($exception, 'getCode')) {
-            $statusCode = ($exception->getStatusCode()) ?: 500;
+        if (method_exists($exception, 'getStatusCode')) {
+            $statusCode = $exception->getStatusCode() ?: 500;
+        } else if (method_exists($exception, 'getCode')) {
+            $statusCode = $exception->getCode() ?: 500;
         }
 
         if (get_class($exception) == 'Illuminate\Auth\AuthenticationException') {
