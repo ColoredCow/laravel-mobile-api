@@ -57,7 +57,11 @@ trait CanHaveAPIEndPoints
 
     public function renderErrorResponseForAPI($exception)
     {
-        if (method_exists($exception, 'getStatusCode')) {
+        if (!$this->isApi()) {
+            throw $exception;
+        }
+
+        if (method_exists($exception, 'getStatusCode') || method_exists($exception, 'getCode')) {
             $statusCode = ($exception->getStatusCode()) ?: 500;
         }
 
@@ -68,7 +72,7 @@ trait CanHaveAPIEndPoints
         return response()->json([
             'error' => true,
             'message' => $exception->getMessage(),
-            'status-code' => $statusCode
+            'status-code' => $statusCode,
         ], $statusCode);
     }
 }
