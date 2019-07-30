@@ -57,8 +57,14 @@ trait CanHaveAPIEndPoints
 
     public function renderErrorResponseForAPI($exception)
     {
+        if (!$this->isApi()) {
+            throw $exception;
+        }
+
         if (method_exists($exception, 'getStatusCode')) {
-            $statusCode = ($exception->getStatusCode()) ?: 500;
+            $statusCode = $exception->getStatusCode() ?: 500;
+        } else if (method_exists($exception, 'getCode')) {
+            $statusCode = $exception->getCode() ?: 500;
         }
 
         if (get_class($exception) == 'Illuminate\Auth\AuthenticationException') {
@@ -68,7 +74,7 @@ trait CanHaveAPIEndPoints
         return response()->json([
             'error' => true,
             'message' => $exception->getMessage(),
-            'status-code' => $statusCode
+            'status-code' => $statusCode,
         ], $statusCode);
     }
 }
