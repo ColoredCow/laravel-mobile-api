@@ -2,7 +2,7 @@
 
 # Prerequisite
 
-This package requires a basic understanding of [Laravel Passport].(https://laravel.com/docs/5.6/passport)
+This package requires a basic understanding of [Laravel Passport](https://laravel.com/docs/5.6/passport).
 
 
 ## Installation
